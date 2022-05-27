@@ -1,28 +1,20 @@
 import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
-import * as Style from "./style";
+import * as Styled from "./style";
 
-function BestMovies({ movies, className }) {
+const BestMovies = ({ movies, className }) => {
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
 
   const minScore = 94;
+  movies = movies.filter(({ rt_score }) => rt_score > minScore);
 
-  const renderBestMovies = () =>
-    movies.map((movie, key) => {
-      if (movie.rt_score > minScore) {
-        return (
-          <p key={key}>
-            {movie.rt_score} - {movie.title}
-          </p>
-        );
-      }
-
-      return null;
-    });
+  const bestMovies = movies.sort(
+    (previous, next) => previous.rt_score - next.rt_score
+  );
 
   return (
-    <Style.Container>
+    <Styled.Container>
       <Button color="danger" onClick={toggle}>
         Ver melhores filmes
       </Button>
@@ -30,10 +22,17 @@ function BestMovies({ movies, className }) {
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Lista dos melhores filmes</ModalHeader>
         <ModalBody>
-          <div>{renderBestMovies()}</div>
+          {bestMovies.map((movie, key) => {
+            return (
+              <div key={key}>
+                <strong>{movie.rt_score}</strong>
+                <p>{movie.title}</p>
+              </div>
+            );
+          })}
         </ModalBody>
       </Modal>
-    </Style.Container>
+    </Styled.Container>
   );
 }
 
