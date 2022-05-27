@@ -9,10 +9,10 @@ function BestMovies({ movies, className }) {
   const minScore = 94;
 
   const renderBestMovies = () =>
-    movies.map((movie) => {
+    movies.map((movie, key) => {
       if (movie.rt_score > minScore) {
         return (
-          <p>
+          <p key={key}>
             {movie.rt_score} - {movie.title}
           </p>
         );

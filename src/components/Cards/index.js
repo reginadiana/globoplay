@@ -19,7 +19,7 @@ const Cards = ({ movies }) => {
   const renderMovies = () => {
     var moviesDisplayed = 0;
 
-    return movies.map((movie) => {
+    return movies.map((movie, key) => {
       var foundSearch = movie.title.toUpperCase().includes(search);
 
       if (foundSearch && moviesDisplayed < seeMore) {
@@ -27,6 +27,7 @@ const Cards = ({ movies }) => {
 
         return (
           <Style.Movie
+            key={key}
             src={posterIt}
             onClick={() => toggle(movie)}
             alt="Poster do filme"
