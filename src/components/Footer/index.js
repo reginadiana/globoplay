@@ -1,10 +1,10 @@
 import React from "react";
-import { Container } from "./style";
+import * as Styled from "./style";
 
 const Footer = () => (
-  <Container>
+  <Styled.Footer>
     <h6>Bootcamp WoMakersCode React | Diana Regina</h6>
-  </Container>
+  </Styled.Footer>
 );
 
 export default Footer;

@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
-export const Context = styled.div`
+export const Header = styled.header`
   display: flex;
   justify-content: space-around;
   width: 100%;
-  padding: 10px;
-
-  img {
-    width: 150px;
-  }
+  padding: 20px;
 
   @media screen and (max-width: 592px) {
     align-items: center;
@@ -34,7 +30,6 @@ export const Search = styled.div`
   }
 
   input {
-    border: none;
     outline: none;
     margin-left: 10px;
     color: white;

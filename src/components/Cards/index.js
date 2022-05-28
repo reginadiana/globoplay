@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import posterIt from "../../assets/poster.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Context } from "../../context";
-import BestMovies from "../BestMovies/index";
+import BestMovies from "../BestMovies";
 import * as Style from "./style";
 import { Modal, ModalHeader, ModalBody, Button } from "reactstrap";
 
@@ -45,33 +45,39 @@ const Cards = ({ movies }) => {
 
       <Style.Container>
         <Style.Movies>{renderMovies()}</Style.Movies>
-        <Button color="danger" onClick={() => setSeeMore(seeMore + 4)}>
-          +
-        </Button>
+        {seeMore < movies.length && (
+          <Button
+            color="danger"
+            onClick={() => setSeeMore(seeMore + 4)}
+            aria-label="Mostrar mais 4 filmes"
+          >
+            +
+          </Button>
+        )}
       </Style.Container>
 
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>{movie.title}</ModalHeader>
         <ModalBody>
-          <Style.Description>
-            <h6>Descrição:</h6>
+          <div>
+            <Style.Info>Descrição:</Style.Info>
             <p>{movie.description}</p>
-          </Style.Description>
+          </div>
 
-          <Style.Info>
-            <h6>Diretor:</h6>
+          <div>
+            <Style.Info>Diretor:</Style.Info>
             <p>{movie.director}</p>
-          </Style.Info>
+          </div>
 
-          <Style.Info>
-            <h6>Produtor:</h6>
+          <div>
+            <Style.Info>Produtor:</Style.Info>
             <p>{movie.producer}</p>
-          </Style.Info>
+          </div>
 
-          <Style.Info>
-            <h6>Lançamento:</h6>
+          <div>
+            <Style.Info>Lançamento:</Style.Info>
             <p>{movie.release_date}</p>
-          </Style.Info>
+          </div>
         </ModalBody>
       </Modal>
     </>
