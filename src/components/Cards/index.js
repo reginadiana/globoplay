@@ -1,10 +1,9 @@
 import React, { useContext, useState } from "react";
-import posterIt from "../../assets/poster.jpg";
+import { Modal, ModalHeader, ModalBody, Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Context } from "../../context";
 import BestMovies from "../BestMovies";
 import * as Style from "./style";
-import { Modal, ModalHeader, ModalBody, Button } from "reactstrap";
 
 const Cards = ({ movies }) => {
   const { search } = useContext(Context);
@@ -17,14 +16,10 @@ const Cards = ({ movies }) => {
   };
 
   const renderMovies = () => {
-    var moviesDisplayed = 0;
-
     return movies.map((movie, key) => {
-      console.log(movie);
       var foundSearch = movie.title.toUpperCase().includes(search);
 
-      if (foundSearch && moviesDisplayed < seeMore) {
-        moviesDisplayed = moviesDisplayed + 1;
+      if (foundSearch && key < seeMore) {
 
         return (
           <Style.Movie

@@ -6,11 +6,11 @@ import { Context } from "../../context";
 import "./style.css";
 
 const Home = () => {
-  const [search, getSearch] = useState("");
+  const [search, setSearch] = useState("");
 
   return (
-    <Context.Provider value={{ search }}>
-      <Header getSearch={(search) => getSearch(search)} />
+    <Context.Provider value={{ search, setSearch }}>
+      <Header />
       <ApiMovies />
       <Footer />
     </Context.Provider>
