@@ -18,9 +18,11 @@ O projeto é uma aplicação frontend que realiza uma requisição da API de fil
 
 :heavy_check_mark: Layout responsivo
 
+:heavy_check_mark: Botão de ver mais (mostra de 4 em 4 filmes)
+
 ### :iphone: Layout 
 
-![Screenshot_2021-01-02 Netflix](https://user-images.githubusercontent.com/46378210/103469380-b1bbfe80-4d42-11eb-8dfc-acf7f5347519.png)
+<img src="https://user-images.githubusercontent.com/46378210/170803030-7e655062-d812-42e3-ade0-ed23c21776e8.png" width="900" />
 
 ## Resources
 
