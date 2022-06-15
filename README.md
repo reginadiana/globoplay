@@ -56,7 +56,7 @@ Exemplo de resposta da API: https://ghibliapi.herokuapp.com/films
 Clone este projeto e entre na pasta:
 
 ```
-git clone https://github.com/reginadiana/list-movies && list-movies
+git clone https://github.com/reginadiana/onlymovies
 ```
 Instale as dependencias e execute:
 
@@ -64,7 +64,7 @@ Instale as dependencias e execute:
 $ yarn install && start
 ```
 
-É possivel acessar o projeto rodando na rota: http://localhost:3000
+É possivel acessar o projeto rodando na rota: http://localhost:3001
 
 If you can and wanted give me some **feedback** about my project or README.md, send me a **Pull Requests**. Advices are many welcome and constructive for me :smile:
 
@@ -78,4 +78,8 @@ $ docker-compose build
 
 ```
 $ docker-compose up
+```
+
+```
+$ docker-compose run --rm --service-ports app bash  
 ```
