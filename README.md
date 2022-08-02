@@ -4,10 +4,6 @@
 
 O projeto é uma aplicação frontend que realiza uma requisição da API de filmes do Studio Ghibli e os apresenta para o usuário.
 
-## :star: Deploy
-
-> https://list-movies.netlify.app/
-
 ## Funcionalidades
 
 :heavy_check_mark: Consumo de API com fetch

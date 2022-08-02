@@ -4,8 +4,13 @@ WORKDIR /app
 
 COPY package.json ./
 
-RUN yarn install
+RUN npm install
+RUN npm install --location=global json-server
 
 COPY . .
 
-CMD ["yarn", "start"]
+RUN npm run build
+
+EXPOSE 8080
+
+CMD ["npm", "run", "serve"]
