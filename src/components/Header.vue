@@ -1,14 +1,13 @@
 <template>
-  <header>
+  <header class="header">
     <nav>
-      <ul>
-        <li>Agora na TV</li>
-        <li>Agora na TV</li>
-        <li>Novelas</li>
-        <li>Séries</li>
-        <li>Filmes</li>
-        <li>Originais</li>
-        <li>Explore</li>
+      <ul class="items">
+        <li class="item">Agora na TV</li>
+        <li class="item">Novelas</li>
+        <li class="item">Séries</li>
+        <li class="item">Filmes</li>
+        <li class="item">Originais</li>
+        <li class="item">Explore</li>
       </ul>
     </nav>
   </header>
@@ -20,4 +19,28 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.header {
+  background-color: #000;
+  padding: 16px;
+  display: none;
+}
+
+.item {
+  color: #888;
+  font-weight: bold;
+  margin-left: 16px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.item:hover {
+  color: #fff;
+}
+
+@media (min-width: 820px) {
+  .header, .items {
+    display: flex;
+  }
+}
+</style>

@@ -28,8 +28,11 @@ export default {
   /* Position title */
   display: flex;
   align-items: flex-end;
+  border: 2px solid transparent;
+}
 
-  border: 5px solid red;
+.category:hover {
+  border: 2px solid #fff;
 }
 
 .category__title {
@@ -37,14 +40,14 @@ export default {
   font-size: 1rem;
 }
 
-@media (max-width: 819px) {
+@media (max-width: 1023px) {
   .category {
     /* Não suportado no IE */
     aspect-ratio: 1.5 / 1;
   }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 1024px) {
   .category {
     width: 200px;
     height: 100px;

@@ -32,10 +32,9 @@ export default {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
-  background: pink;
 }
 
-@media (min-width: 820px) {
+@media (min-width: 1024px) {
   .categories {
     /* Essa max e auto podem ir para o componente pai */
     /* largura do card + gap do grid */

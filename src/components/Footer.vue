@@ -3,15 +3,16 @@
     <div class="footer__inner">
       <p class="footer__copyright">
         Globo.com © 2000-2022 Globo Comunicação e Participações S.A. - Todos os
-        direitos reservados -
-        <a
-          href="https://ajuda.globo/globoplay/termos-e-politicas/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Termos e políticas
-        </a>
+        direitos reservados
       </p>
+
+      <a
+        href="https://ajuda.globo/globoplay/termos-e-politicas/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Termos e políticas
+      </a>
     </div>
   </footer>
 </template>
@@ -45,8 +46,10 @@ export default {
 
 @media (min-width: 820px) {
   .footer__inner {
+    display: flex;
     max-width: 1200px;
     margin: auto;
+    justify-content: space-between;
   }
 }
 </style>

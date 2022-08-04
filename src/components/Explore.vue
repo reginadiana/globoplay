@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="explore">
     <Tabs />
     <Categories />
   </section>
@@ -18,4 +18,19 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+@media (max-width: 1023px) {
+  .explore {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .explore {
+    /* Essa max e auto podem ir para o componente pai */
+    /* largura do card + gap do grid */
+    max-width: calc((200px * 4) + (8px * 3));
+    margin: auto;
+  }
+}
+</style>
