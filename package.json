@@ -2,12 +2,13 @@
   "name": "globoplay",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://reginadiana.github.io/globoplay",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build:lambda": "netlify-lambda build .",
-    "start:lambda": "netlify-lambda serve ."
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -22,7 +23,7 @@
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
-    "netlify-lambda": "^2.0.15",
+    "gh-pages": "^6.0.0",
     "webpack": "^4.46.0"
   },
   "eslintConfig": {
